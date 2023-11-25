@@ -275,8 +275,8 @@ local function setup(configs)
       htmlSpecialChar = { fg = colors.yellow, },
       htmlSpecialTagName = { fg = colors.cyan, },
       htmlTag = { fg = colors.purple, bold = true },
-      htmlTagN = { fg = colors.cyan, },
-      htmlTagName = { fg = colors.cyan, },
+      htmlTagN = { fg = colors.purple, },
+      htmlTagName = { fg = colors.pink, },
       htmlTitle = { fg = colors.white, },
 
       -- Markdown
