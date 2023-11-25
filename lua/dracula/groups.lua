@@ -248,6 +248,8 @@ local function setup(configs)
 
       ['@neorg.quotes'] = { fg = colors.pink },
 
+      ['@neorg.code'] = { fg = colors.purple },
+
 
       -- HTML
       htmlArg = { fg = colors.green, },
