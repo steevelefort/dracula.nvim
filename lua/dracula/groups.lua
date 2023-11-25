@@ -237,13 +237,13 @@ local function setup(configs)
       ['@neorg.links.file'] = { fg = colors.fg },
       ['@neorg.links.location'] = { fg = colors.cyan },
 
-      ['@neorg.todo_items.cancelled'] = { fg = colors.pink },
-      ['@neorg.todo_items.done'] = { fg = colors.pink },
-      ['@neorg.todo_items.on_hold'] = { fg = colors.pink },
-      ['@neorg.todo_items.pending'] = { fg = colors.pink },
-      ['@neorg.todo_items.recurring'] = { fg = colors.pink },
-      ['@neorg.todo_items.uncertain'] = { fg = colors.pink },
-      ['@neorg.todo_items.undone'] = { fg = colors.pink },
+      ['@neorg.todo_items.cancelled'] = { fg = colors.fg },
+      ['@neorg.todo_items.done'] = { fg = colors.green },
+      ['@neorg.todo_items.on_hold'] = { fg = colors.orange },
+      ['@neorg.todo_items.pending'] = { fg = colors.orange },
+      ['@neorg.todo_items.recurring'] = { fg = colors.orange },
+      ['@neorg.todo_items.uncertain'] = { fg = colors.orange},
+      ['@neorg.todo_items.undone'] = { fg = colors.fg },
       ['@neorg.todo_items.urgent'] = { fg = colors.pink },
 
       -- HTML
