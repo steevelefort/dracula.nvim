@@ -232,6 +232,8 @@ local function setup(configs)
       ['@neorg.headings.5.prefix'] = { fg = colors.cyan },
       ['@neorg.headings.6.title'] = { fg = colors.orange },
       ['@neorg.headings.6.prefix'] = { fg = colors.orange },
+
+      ['@neorg.links'] = { fg = colors.cyan },
       -- HTML
       htmlArg = { fg = colors.green, },
       htmlBold = { fg = colors.yellow, bold = true, },
