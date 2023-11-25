@@ -255,6 +255,7 @@ local function setup(configs)
       ['@neorg.tags.ranged_verbatim.code_block'] = { fg = colors.green },
       ['@neorg.ranged_verbatim_tag'] = { fg = colors.yellow },
       ['@neorg.tags'] = { fg = colors.cyan },
+      ['@neorg.tags.name'] = { fg = colors.green },
 
 
 
