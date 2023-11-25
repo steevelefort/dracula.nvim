@@ -274,7 +274,7 @@ local function setup(configs)
       htmlLink = { fg = colors.purple, underline = true, },
       htmlSpecialChar = { fg = colors.yellow, },
       htmlSpecialTagName = { fg = colors.cyan, },
-      htmlTag = { fg = colors.cyan, },
+      htmlTag = { fg = colors.purple, bold = true },
       htmlTagN = { fg = colors.cyan, },
       htmlTagName = { fg = colors.cyan, },
       htmlTitle = { fg = colors.white, },
