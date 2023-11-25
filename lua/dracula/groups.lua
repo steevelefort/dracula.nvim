@@ -179,19 +179,19 @@ local function setup(configs)
       ['@variable.builtin'] = { fg = colors.purple, },
 
       ['@text'] = { fg = colors.orange, },
-      ['@text.strong'] = { fg = colors.orange, bold = true, }, -- bold
+      ['@text.strong'] = { fg = colors.orange, bold = true, },     -- bold
       ['@text.emphasis'] = { fg = colors.yellow, italic = true, }, -- italic
       ['@text.underline'] = { fg = colors.orange, },
-      ['@text.title'] = { fg = colors.pink, bold = true, }, -- title
-      ['@text.literal'] = { fg = colors.yellow, }, -- inline code
-      ['@text.uri'] = { fg = colors.yellow, italic = true, }, -- urls
+      ['@text.title'] = { fg = colors.pink, bold = true, },        -- title
+      ['@text.literal'] = { fg = colors.yellow, },                 -- inline code
+      ['@text.uri'] = { fg = colors.yellow, italic = true, },      -- urls
       ['@text.reference'] = { fg = colors.orange, bold = true, },
 
       ['@tag'] = { fg = colors.cyan, },
       ['@tag.attribute'] = { fg = colors.green, },
       ['@tag.delimiter'] = { fg = colors.cyan, },
 
-        -- Semantic 
+      -- Semantic
       ['@class'] = { fg = colors.cyan },
       ['@struct'] = { fg = colors.cyan },
       ['@enum'] = { fg = colors.cyan },
@@ -203,7 +203,7 @@ local function setup(configs)
       ['@typeParameter'] = { fg = colors.cyan },
       ['@decorator'] = { fg = colors.cyan },
 
-        -- LSP Semantic (0.9+)
+      -- LSP Semantic (0.9+)
       ['@lsp.type.class'] = { fg = colors.cyan },
       ['@lsp.type.enum'] = { fg = colors.cyan },
       ['@lsp.type.decorator'] = { fg = colors.green },
@@ -219,9 +219,18 @@ local function setup(configs)
       ['@lsp.type.type'] = { fg = colors.bright_cyan, },
       ['@lsp.type.variable'] = { fg = colors.fg, },
 
-['@neorg.headings.1.title'] = { fg = colors.red, bold = true },
-['@neorg.headings.1.prefix'] = { fg = colors.red, bold = true },
-            
+      ['@neorg.headings.1.title'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.1.prefix'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.2.title'] = { fg = colors.purple, bold = true },
+      ['@neorg.headings.2.prefix'] = { fg = colors.purple, bold = true },
+      ['@neorg.headings.3.title'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.3.prefix'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.4.title'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.4.prefix'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.5.title'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.5.prefix'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.6.title'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.6.prefix'] = { fg = colors.pink, bold = true },
       -- HTML
       htmlArg = { fg = colors.green, },
       htmlBold = { fg = colors.yellow, bold = true, },
@@ -534,4 +543,3 @@ end
 return {
    setup = setup,
 }
-
