@@ -246,6 +246,9 @@ local function setup(configs)
       ['@neorg.todo_items.undone'] = { fg = colors.fg },
       ['@neorg.todo_items.urgent'] = { fg = colors.pink },
 
+      ['@neorg.quotes'] = { fg = colors.pink },
+
+
       -- HTML
       htmlArg = { fg = colors.green, },
       htmlBold = { fg = colors.yellow, bold = true, },
