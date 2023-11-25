@@ -251,6 +251,7 @@ local function setup(configs)
       ['@neorg.code'] = { fg = colors.purple },
       ['@neorg.markup.code'] = { fg = colors.purple },
       ['@neorg.tags.ranged_verbatim.code_block'] = { fg = colors.purple },
+      ['@neorg.ranged_verbatim_tag'] = { fg = colors.purple },
 
 
       -- HTML
