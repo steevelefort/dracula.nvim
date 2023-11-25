@@ -249,6 +249,7 @@ local function setup(configs)
       ['@neorg.quotes'] = { fg = colors.pink },
 
       ['@neorg.code'] = { fg = colors.purple },
+      ['@neorg.markup.code'] = { fg = colors.purple },
 
 
       -- HTML
