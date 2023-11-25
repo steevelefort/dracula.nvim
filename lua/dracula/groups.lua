@@ -219,7 +219,8 @@ local function setup(configs)
       ['@lsp.type.type'] = { fg = colors.bright_cyan, },
       ['@lsp.type.variable'] = { fg = colors.fg, },
 
-['@neorg.headings.1.title'] = { fg = colors.orange },
+['@neorg.headings.1.title'] = { fg = colors.red, bold = true },
+['@neorg.headings.1.prefix'] = { fg = colors.red, bold = true },
             
       -- HTML
       htmlArg = { fg = colors.green, },
