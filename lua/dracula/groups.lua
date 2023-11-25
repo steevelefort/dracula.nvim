@@ -129,7 +129,7 @@ local function setup(configs)
       EndOfBuffer = endOfBuffer,
 
       -- PHP
-      phpTag = { fg = colors.fg }
+      phpTag = { fg = colors.fg },
 
       -- TreeSitter
       ['@error'] = { fg = colors.bright_red, },
