@@ -262,12 +262,12 @@ local function setup(configs)
       -- ['@neorg.tags.parameters'] = { fg = colors.yellow },
 
       -- OrgMode
-      ['@OrgHeadlineLevel1'] = { fg = colors.pink, bold = true }
-      ['@OrgHeadlineLevel2'] = { fg = colors.purple, bold = true }
-      ['@OrgHeadlineLevel3'] = { fg = colors.green, bold = true }
-      ['@OrgHeadlineLevel4'] = { fg = colors.yellow, bold = true }
-      ['@OrgHeadlineLevel5'] = { fg = colors.cyan, bold = true }
-      ['@OrgHeadlineLevel6'] = { fg = colors.orange, bold = true }
+      ['@OrgHeadlineLevel1'] = { fg = colors.pink, bold = true },
+      ['@OrgHeadlineLevel2'] = { fg = colors.purple, bold = true },
+      ['@OrgHeadlineLevel3'] = { fg = colors.green, bold = true },
+      ['@OrgHeadlineLevel4'] = { fg = colors.yellow, bold = true },
+      ['@OrgHeadlineLevel5'] = { fg = colors.cyan, bold = true },
+      ['@OrgHeadlineLevel6'] = { fg = colors.orange, bold = true },
 
 
       -- HTML
