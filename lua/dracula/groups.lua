@@ -110,7 +110,8 @@ local function setup(configs)
 
       Question = { fg = colors.purple, },
       QuickFixLine = { fg = colors.black, bg = colors.yellow, },
-      SpecialKey = { fg = colors.nontext, },
+      -- SpecialKey = { fg = colors.nontext, },
+      SpecialKey = { fg = colors.black, },
 
       SpellBad = { fg = colors.bright_red, underline = true, },
       SpellCap = { fg = colors.yellow, },
