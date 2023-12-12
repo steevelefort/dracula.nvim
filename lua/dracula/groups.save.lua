@@ -38,7 +38,8 @@ local function setup(configs)
    return {
       Normal = { fg = colors.fg, bg = colors.bg, },
       NormalFloat = { fg = colors.fg, bg = colors.bg, },
-      Comment = { fg = colors.comment, italic = configs.italic_comment, },
+      -- Comment = { fg = colors.comment, italic = configs.italic_comment, },
+      Comment = { fg = colors.comment, italic = true, },
       Constant = { fg = colors.yellow, },
       String = { fg = colors.yellow, },
       Character = { fg = colors.green, },
@@ -50,7 +51,7 @@ local function setup(configs)
       Keyword = { fg = colors.cyan, },
       Keywords = { fg = colors.cyan, },
       Identifier = { fg = colors.cyan, },
-      Function = { fg = colors.yellow, },
+      Function = { fg = colors.yellow, bold = true },
       Statement = { fg = colors.purple, },
       Conditional = { fg = colors.pink, },
       Repeat = { fg = colors.pink, },
@@ -109,7 +110,8 @@ local function setup(configs)
 
       Question = { fg = colors.purple, },
       QuickFixLine = { fg = colors.black, bg = colors.yellow, },
-      SpecialKey = { fg = colors.nontext, },
+      -- SpecialKey = { fg = colors.nontext, },
+      SpecialKey = { fg = colors.black, },
 
       SpellBad = { fg = colors.bright_red, underline = true, },
       SpellCap = { fg = colors.yellow, },
@@ -126,6 +128,9 @@ local function setup(configs)
       WildMenu = { fg = colors.black, bg = colors.white, },
 
       EndOfBuffer = endOfBuffer,
+
+      -- PHP
+      phpTag = { fg = colors.fg },
 
       -- TreeSitter
       ['@error'] = { fg = colors.bright_red, },
@@ -179,19 +184,19 @@ local function setup(configs)
       ['@variable.builtin'] = { fg = colors.purple, },
 
       ['@text'] = { fg = colors.orange, },
-      ['@text.strong'] = { fg = colors.orange, bold = true, }, -- bold
+      ['@text.strong'] = { fg = colors.orange, bold = true, },     -- bold
       ['@text.emphasis'] = { fg = colors.yellow, italic = true, }, -- italic
       ['@text.underline'] = { fg = colors.orange, },
-      ['@text.title'] = { fg = colors.pink, bold = true, }, -- title
-      ['@text.literal'] = { fg = colors.yellow, }, -- inline code
-      ['@text.uri'] = { fg = colors.yellow, italic = true, }, -- urls
+      ['@text.title'] = { fg = colors.pink, bold = true, },        -- title
+      ['@text.literal'] = { fg = colors.yellow, },                 -- inline code
+      ['@text.uri'] = { fg = colors.yellow, italic = true, },      -- urls
       ['@text.reference'] = { fg = colors.orange, bold = true, },
 
       ['@tag'] = { fg = colors.cyan, },
       ['@tag.attribute'] = { fg = colors.green, },
       ['@tag.delimiter'] = { fg = colors.cyan, },
 
-        -- Semantic 
+      -- Semantic
       ['@class'] = { fg = colors.cyan },
       ['@struct'] = { fg = colors.cyan },
       ['@enum'] = { fg = colors.cyan },
@@ -203,7 +208,7 @@ local function setup(configs)
       ['@typeParameter'] = { fg = colors.cyan },
       ['@decorator'] = { fg = colors.cyan },
 
-        -- LSP Semantic (0.9+)
+      -- LSP Semantic (0.9+)
       ['@lsp.type.class'] = { fg = colors.cyan },
       ['@lsp.type.enum'] = { fg = colors.cyan },
       ['@lsp.type.decorator'] = { fg = colors.green },
@@ -219,23 +224,70 @@ local function setup(configs)
       ['@lsp.type.type'] = { fg = colors.bright_cyan, },
       ['@lsp.type.variable'] = { fg = colors.fg, },
 
+      ['@neorg.headings.1.title'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.1.prefix'] = { fg = colors.pink, bold = true },
+      ['@neorg.headings.2.title'] = { fg = colors.purple, bold = true },
+      ['@neorg.headings.2.prefix'] = { fg = colors.purple, bold = true },
+      ['@neorg.headings.3.title'] = { fg = colors.green },
+      ['@neorg.headings.3.prefix'] = { fg = colors.green },
+      ['@neorg.headings.4.title'] = { fg = colors.yellow },
+      ['@neorg.headings.4.prefix'] = { fg = colors.yellow },
+      ['@neorg.headings.5.title'] = { fg = colors.cyan },
+      ['@neorg.headings.5.prefix'] = { fg = colors.cyan },
+      ['@neorg.headings.6.title'] = { fg = colors.orange },
+      ['@neorg.headings.6.prefix'] = { fg = colors.orange },
+
+      ['@neorg.links.description'] = { fg = colors.yellow },
+      ['@neorg.links.file'] = { fg = colors.fg },
+      ['@neorg.links.location'] = { fg = colors.cyan },
+
+      ['@neorg.todo_items.cancelled'] = { fg = colors.fg },
+      ['@neorg.todo_items.done'] = { fg = colors.green },
+      ['@neorg.todo_items.on_hold'] = { fg = colors.orange },
+      ['@neorg.todo_items.pending'] = { fg = colors.orange },
+      ['@neorg.todo_items.recurring'] = { fg = colors.orange },
+      ['@neorg.todo_items.uncertain'] = { fg = colors.orange},
+      ['@neorg.todo_items.undone'] = { fg = colors.fg },
+      ['@neorg.todo_items.urgent'] = { fg = colors.pink },
+
+      ['@neorg.quotes'] = { fg = colors.pink },
+
+      -- ['@neorg.code'] = { fg = colors.purple },
+      -- ['@neorg.markup.code'] = { fg = colors.purple },
+      -- ['@neorg.markup'] = { fg = colors.purple },
+      -- ['@neorg.markups'] = { fg = colors.orange },
+      -- ['@neorg.tags.ranged_verbatim.code_block'] = { fg = colors.green },
+      -- ['@neorg.ranged_verbatim_tag'] = { fg = colors.yellow },
+      -- ['@neorg.tags'] = { fg = colors.cyan },
+      -- ['@neorg.tags.name'] = { fg = colors.green },
+      -- ['@neorg.tags.parameters'] = { fg = colors.yellow },
+
+      -- OrgMode
+      ['@OrgHeadlineLevel1'] = { fg = colors.pink, bold = true },
+      ['@OrgHeadlineLevel2'] = { fg = colors.purple, bold = true },
+      ['@OrgHeadlineLevel3'] = { fg = colors.green, bold = true },
+      ['@OrgHeadlineLevel4'] = { fg = colors.yellow, bold = true },
+      ['@OrgHeadlineLevel5'] = { fg = colors.cyan, bold = true },
+      ['@OrgHeadlineLevel6'] = { fg = colors.orange, bold = true },
+
+
       -- HTML
       htmlArg = { fg = colors.green, },
       htmlBold = { fg = colors.yellow, bold = true, },
       htmlEndTag = { fg = colors.cyan, },
-      htmlH1 = { fg = colors.pink, },
-      htmlH2 = { fg = colors.pink, },
-      htmlH3 = { fg = colors.pink, },
-      htmlH4 = { fg = colors.pink, },
-      htmlH5 = { fg = colors.pink, },
-      htmlH6 = { fg = colors.pink, },
+      htmlH1 = { fg = colors.orange ,bold = true},
+      htmlH2 = { fg = colors.orange ,bold = true},
+      htmlH3 = { fg = colors.orange ,bold = true},
+      htmlH4 = { fg = colors.orange ,bold = true},
+      htmlH5 = { fg = colors.orange ,bold = true},
+      htmlH6 = { fg = colors.orange ,bold = true},
       htmlItalic = { fg = colors.purple, italic = true, },
       htmlLink = { fg = colors.purple, underline = true, },
       htmlSpecialChar = { fg = colors.yellow, },
       htmlSpecialTagName = { fg = colors.cyan, },
-      htmlTag = { fg = colors.cyan, },
-      htmlTagN = { fg = colors.cyan, },
-      htmlTagName = { fg = colors.cyan, },
+      htmlTag = { fg = colors.purple },
+      htmlTagN = { fg = colors.purple, },
+      htmlTagName = { fg = colors.pink, bold = true},
       htmlTitle = { fg = colors.white, },
 
       -- Markdown
@@ -531,4 +583,3 @@ end
 return {
    setup = setup,
 }
-
