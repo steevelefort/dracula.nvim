@@ -526,7 +526,6 @@ local function setup(configs)
       NotifyWarnTitle = { fg = colors.orange },
       NotifyWarnBorder = { fg = "#785637" },
 
-      ['@neorg.headings.1.title'] = { link = "@text.title" },
    }
 end
 
